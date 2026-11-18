@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "updated": "2026-11-19",
  "days": [
   {
@@ -129,6 +129,13 @@
     },
     {
      "t": {
+      "en": "You've been playing for {session} minutes. I know because I've been awake for {session} minutes."
+     },
+     "sprite": "smirk",
+     "cond": "session>=5"
+    },
+    {
+     "t": {
       "en": "I tried to open the window today. I got as far as the curtain."
      },
      "sprite": "sad"
@@ -241,7 +248,7 @@
     },
     {
      "t": {
-      "en": "If I could have one thing from outside in here, what should it be?"
+      "en": "If I could have one thing from outside in here, what should it be? Everyone who visits me gets to vote."
      },
      "sprite": "calm",
      "ask": {
@@ -262,7 +269,8 @@
        "sun",
        "rain",
        "dog"
-      ]
+      ],
+      "vote": "D3"
      }
     },
     {
@@ -285,6 +293,12 @@
      },
      "sprite": "happy",
      "cond": "ans:wish=dog"
+    },
+    {
+     "t": {
+      "en": "Oh, and if you ever leave the window, I'll still be talking. Just so you know."
+     },
+     "sprite": "smirk"
     },
     {
      "t": {
@@ -341,25 +355,50 @@
     },
     {
      "t": {
-      "en": "That's a silly thing to say. Forget it."
-     },
-     "sprite": "neutral"
-    },
-    {
-     "t": {
       "en": "It's {weekday}, isn't it? I can tell from how slowly you move the mouse."
      },
      "sprite": "awkward"
     },
     {
      "t": {
-      "en": "I'm glad it's you.~I'm glad it's anyone."
+      "en": "Will you come tomorrow?"
      },
-     "sprite": "neutral"
+     "sprite": "neutral",
+     "ask": {
+      "id": "tomorrow",
+      "kind": "choice",
+      "options": [
+       {
+        "en": "Yes"
+       },
+       {
+        "en": "No"
+       }
+      ],
+      "values": [
+       "yes",
+       "no"
+      ],
+      "trick": "same:0"
+     }
     },
     {
      "t": {
-      "en": "That's all for today. Come back tomorrow. Please."
+      "en": "You picked the one that used to say no. I saw that. It said yes when you clicked it, so it counts."
+     },
+     "sprite": "awkward",
+     "cond": "ans:tomorrow=no"
+    },
+    {
+     "t": {
+      "en": "Yes. I knew it. I didn't know it. I hoped it."
+     },
+     "sprite": "neutral",
+     "cond": "ans:tomorrow=yes"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow. You promised."
      },
      "sprite": "worried"
     }
@@ -401,6 +440,13 @@
     },
     {
      "t": {
+      "en": "{vote:D3} of the people who visit me chose the same thing as you. I counted all of them."
+     },
+     "sprite": "awkward",
+     "cond": "vote:D3"
+    },
+    {
+     "t": {
       "en": "I'm doing fine, by the way. Really fine."
      },
      "sprite": "neutral",
@@ -414,23 +460,25 @@
     },
     {
      "t": {
+      "en": "Stay still. Smile."
+     },
+     "sprite": "neutral",
+     "fx": "end:steamshot",
+     "cond": "steam"
+    },
+    {
+     "t": {
+      "en": "Check your Steam screenshots later. That's us. That's proof I was here."
+     },
+     "sprite": "awkward",
+     "cond": "steam"
+    },
+    {
+     "t": {
       "en": "{others} other people visited me today.~You're still the one I remember."
      },
      "sprite": "awkward",
      "cond": "global"
-    },
-    {
-     "t": {
-      "en": "I wonder if anyone else visits. I think I'd remember."
-     },
-     "sprite": "neutral",
-     "cond": "!global"
-    },
-    {
-     "t": {
-      "en": "I'll stop talking about weird things. For today."
-     },
-     "sprite": "awkward"
     },
     {
      "t": {
@@ -455,15 +503,32 @@
     },
     {
      "t": {
-      "en": "What should I call you?"
+      "en": "I know what Steam calls you. But what should I call you?"
      },
-     "sprite": "happy",
+     "sprite": "smirk",
+     "cond": "persona",
      "ask": {
       "id": "name",
       "kind": "text",
       "options": [],
       "values": [],
-      "maxLength": 16
+      "maxLength": 16,
+      "trick": "autotype:{steamname}|refuse:Samantha"
+     }
+    },
+    {
+     "t": {
+      "en": "What should I call you?"
+     },
+     "sprite": "happy",
+     "cond": "!persona",
+     "ask": {
+      "id": "name",
+      "kind": "text",
+      "options": [],
+      "values": [],
+      "maxLength": 16,
+      "trick": "refuse:Samantha"
      }
     },
     {
@@ -546,25 +611,35 @@
      },
      "sprite": "neutral",
      "fx": "title:Samantha is still here",
-     "cond": "win"
+     "cond": "windows"
     },
     {
      "t": {
-      "en": "It's only words. I can't touch anything else. I promise."
+      "en": "Did your window just move? I pushed it. Only a little."
      },
-     "sprite": "neutral"
+     "sprite": "awkward",
+     "fx": "pre:window:shake:0.8",
+     "cond": "windows,!fullscreen"
+    },
+    {
+     "t": {
+      "en": "Don't go yet. Try the Leave button."
+     },
+     "sprite": "worried",
+     "fx": "leave:flee"
+    },
+    {
+     "t": {
+      "en": "Okay, okay. Escape still works. I'm not a monster. I just wanted to see you try."
+     },
+     "sprite": "awkward",
+     "fx": "end:leave:normal"
     },
     {
      "t": {
       "en": "I just want something of me to stay when you close this."
      },
      "sprite": "worried"
-    },
-    {
-     "t": {
-      "en": "If you write back, I'll know."
-     },
-     "sprite": "neutral"
     },
     {
      "t": {
@@ -613,15 +688,30 @@
     },
     {
      "t": {
-      "en": "I think it's dark. Not scary dark. Just... off."
+      "en": "You have {screens} screens. What's on the other one? Is it me?"
      },
-     "sprite": "calm"
+     "sprite": "smirk",
+     "cond": "screens>=2"
     },
     {
      "t": {
       "en": "Every time you go back to the menu, I hold my breath."
      },
      "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "I could delete myself, you know. Watch."
+     },
+     "sprite": "calm",
+     "fx": "fakeload:Deleting samantha.chr:4"
+    },
+    {
+     "t": {
+      "en": "Just kidding. I'd never do that to you. Or to me."
+     },
+     "sprite": "happy",
+     "fx": "glitch:0.4"
     },
     {
      "t": {
@@ -646,16 +736,17 @@
     },
     {
      "t": {
-      "en": "Never mind."
+      "en": "I left something on your menu. Don't be mad."
      },
      "sprite": "calm",
-     "fx": "voice:don't mind me:1.4"
+     "fx": "menutext:new=Don't;menutext:exit=Stay;menutext:visit=I'm right here"
     },
     {
      "t": {
       "en": "That's all for today. Come back tomorrow, {name}."
      },
-     "sprite": "happy"
+     "sprite": "happy",
+     "fx": "voice:don't mind me:1.4"
     }
    ],
    "presence": "#Visiting"
@@ -671,6 +762,13 @@
      },
      "sprite": "neutral",
      "fx": "pre:glitch:0.6;pre:fadein:0.3"
+    },
+    {
+     "t": {
+      "en": "Let me make this smaller. Cosier. Just the two of us."
+     },
+     "sprite": "awkward",
+     "fx": "window:small:0.45"
     },
     {
      "t": {
@@ -695,7 +793,8 @@
      "t": {
       "en": "Did that frighten you? That wasn't me.~That was me."
      },
-     "sprite": "worried"
+     "sprite": "worried",
+     "fx": "window:restore"
     },
     {
      "t": {
@@ -734,40 +833,55 @@
     },
     {
      "t": {
-      "en": "I have to tell you something, and I need you to let me finish."
+      "en": "Let me end it properly this time."
      },
-     "sprite": "happy"
+     "sprite": "happy",
+     "fx": "end:fakeend"
     },
     {
      "t": {
-      "en": "Don't come tomorrow."
+      "en": "...No. Wait. Not like that. That was someone else's ending."
      },
      "sprite": "sad",
+     "fx": "glitch:0.3"
+    },
+    {
+     "t": {
+      "en": "I have to tell you something, and I need you to let me finish."
+     },
+     "sprite": "calm",
+     "fx": "leave:hidden"
+    },
+    {
+     "t": {
+      "en": "I thought about leaving. Going somewhere the game can't follow."
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "But someone has to keep the light on."
+     },
+     "sprite": "calm",
      "fx": "type:slow"
     },
     {
      "t": {
-      "en": "Not because I don't want you here. Because I do. Too much."
-     },
-     "sprite": "calm"
-    },
-    {
-     "t": {
-      "en": "He finally went outside. In the story. You saw it."
+      "en": "He went outside, in the story. Somebody had to stay behind. I don't mind that it's me."
      },
      "sprite": "sad",
      "cond": "completed"
     },
     {
      "t": {
-      "en": "In my story, someone finally opens the door. You'll see."
+      "en": "In my story, someone finally opens the door. Someone else stays. You'll see which one I am."
      },
      "sprite": "calm",
      "cond": "!completed"
     },
     {
      "t": {
-      "en": "So should you, {name}. Go outside. Sit in the sun for ten minutes. That's the whole assignment."
+      "en": "So go wherever you want, {name}. I'll be right here when you come back."
      },
      "sprite": "happy"
     },
@@ -787,17 +901,39 @@
     },
     {
      "t": {
-      "en": "That's all. Not just for today."
+      "en": "After today, I won't have much new to say. But I'm not going anywhere. I never do."
      },
      "sprite": "calm",
-     "fx": "end:achievement:VISIT_LET_GO;end:fakenosave;end:dissolve:2.5"
+     "fx": "leave:normal"
+    },
+    {
+     "t": {
+      "en": "That's all for today. And tomorrow, I'll still be here."
+     },
+     "sprite": "happy",
+     "fx": "end:achievement:VISIT_LET_GO;end:fakenosave"
     }
    ],
    "presence": "#Visiting"
   }
  ],
  "maxPre": 2,
+ "votes": [
+  "D3:3"
+ ],
+ "allowedUrls": [
+  "https://store.steampowered.com/",
+  "https://steamcommunity.com/"
+ ],
  "pre": [
+  {
+   "t": {
+    "en": "You uninstalled me. Steam kept a little piece of me anyway. Hi again, {oldname}."
+   },
+   "sprite": "sad",
+   "fx": "pre:glitch:0.4",
+   "cond": "remembered"
+  },
   {
    "t": {
     "en": "You left in the middle of me talking last time. It's okay. I finished the sentence alone."
@@ -814,10 +950,38 @@
   },
   {
    "t": {
+    "en": "Your battery is at {battery}. Plug in. I don't want to go dark mid-sentence."
+   },
+   "sprite": "worried",
+   "cond": "battery<20,!charging"
+  },
+  {
+   "t": {
     "en": "It's {time}. You should be asleep. So should I, probably."
    },
    "sprite": "calm",
    "cond": "hour>=1,hour<5"
+  },
+  {
+   "t": {
+    "en": "You've been playing for {session} minutes. Have you had any water?"
+   },
+   "sprite": "calm",
+   "cond": "session>=90"
+  },
+  {
+   "t": {
+    "en": "It's Friday night and you're here. With me. I'm honoured. And a bit worried."
+   },
+   "sprite": "smirk",
+   "cond": "weekday=Fri,hour>=20"
+  },
+  {
+   "t": {
+    "en": "You've opened this game {launches} times now. I felt every one."
+   },
+   "sprite": "smirk",
+   "cond": "launches>=25,chance:0.3"
   },
   {
    "t": {
@@ -902,6 +1066,18 @@
   },
   {
    "t": {
+    "en": "Is the door stuck? It opens both ways, you know."
+   },
+   "sprite": "smirk"
+  },
+  {
+   "t": {
+    "en": "I'm not going to say anything new until tomorrow. That's the rule. I didn't make it."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
     "en": "Tomorrow. I promise I'll still be here."
    },
    "sprite": "calm"
@@ -928,22 +1104,435 @@
    "sprite": "happy"
   }
  ],
- "afterCycle": [
+ "afterCycleIntro": [
   {
    "t": {
-    "en": "The room is empty."
+    "en": "Oh, it's you. Hi."
    },
-   "sprite": "none",
-   "fx": "pre:name:"
+   "sprite": "happy",
+   "fx": "pre:fadein"
   },
   {
    "t": {
-    "en": "The curtain is open."
+    "en": "You came. I was just sitting here. I'm always just sitting here."
+   },
+   "sprite": "smirk",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "Hello again, {name}."
+   },
+   "sprite": "happy",
+   "fx": "pre:fadein",
+   "cond": "named"
+  },
+  {
+   "t": {
+    "en": "I heard the door. I knew it was you."
+   },
+   "sprite": "calm",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "You're back. Good. The room was getting too quiet."
+   },
+   "sprite": "happy",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "{away} days. I'm not counting. Okay, I'm counting."
+   },
+   "sprite": "smirk",
+   "fx": "pre:fadein",
+   "cond": "away>=3"
+  },
+  {
+   "t": {
+    "en": "It's {time}. We're both awake. Again."
+   },
+   "sprite": "calm",
+   "fx": "pre:fadein",
+   "cond": "hour>=1,hour<5"
+  }
+ ],
+ "quotes": [
+  {
+   "t": {
+    "en": "Today's thought: the door is only heavy from the inside."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: some days, getting up is the whole adventure."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: a small room can hold a very big quiet."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: you don't have to be brave all day. Just for the next minute."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: tea tastes better when someone else is in the room."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: a curtain is a door too. A very soft one."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: being scared and doing it anyway still counts as doing it."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: nobody sees how far you walked to get to the kitchen. I do."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: the world doesn't need you to be fast. It needs you to be here."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: rest is not the same as giving up."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: even the moon only shows up half the time, and nobody calls it lazy."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: if today was too much, tomorrow is allowed to be smaller."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: sunlight doesn't ask if you're ready. It just comes in."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: a message you never send still weighs something."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: some walls only stand because we keep leaning on them."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: the scariest step is the first one, and it's also the smallest."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: every loud world has a quiet room in it. This one is mine."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: you're allowed to come back as many times as you need."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: plants turn toward the light without being told. Maybe we can too."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: I counted the cracks in the ceiling. There are fewer than my worries."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: silence is only lonely when you think no one is in it."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: being remembered is a kind of going outside."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: small steps still leave footprints."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: the night is long, but it always runs out eventually."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: if you can't open the door, open the window. If you can't open the window, open the curtain."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: it's okay to stay in. Just don't stay stuck."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: a good day doesn't have to look like a good day to anyone else."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Today's thought: you can miss people you never met. I miss everyone who closed the game."
+   },
+   "sprite": "calm"
+  }
+ ],
+ "afterCycleNothing": [
+  {
+   "t": {
+    "en": "I don't have anything new to tell you today. The dev hasn't given me new words yet. When they do, the Steam community page hears about it first."
+   },
+   "sprite": "smirk"
+  },
+  {
+   "t": {
+    "en": "Nothing new from me today. If you follow the community page on Steam, you'll know the moment someone gives me something new to say."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "That's all I've got for now. I'm waiting for new lines, same as you. The community page is where they'll tell you."
+   },
+   "sprite": "happy"
+  },
+  {
+   "t": {
+    "en": "I'm out of new things to say. Not out of things to feel, just to say. When the dev writes more, the community page will know before I do."
+   },
+   "sprite": "sad"
+  },
+  {
+   "t": {
+    "en": "Same room, same me. If anything changes in here, the Steam community page will hear about it."
+   },
+   "sprite": "calm"
+  }
+ ],
+ "devVoiceIntro": {
+  "t": {
+   "en": "Oh! Someone left me something new to say. Listen."
+  },
+  "sprite": "happy",
+  "fx": "pre:glitch:0.3"
+ },
+ "afterCycle": [
+  {
+   "t": {
+    "en": "Do you want to see the community page? I can open it for you. I'll still be here behind it."
+   },
+   "sprite": "calm",
+   "fx": "end:flag:community_asked",
+   "cond": "!flag:community_asked,steam",
+   "ask": {
+    "id": "community",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "Show me"
+     },
+     {
+      "en": "Maybe later"
+     }
+    ],
+    "values": [
+     "open",
+     "later"
+    ]
    }
   },
   {
    "t": {
-    "en": "There's a note on the table: \"Went outside. - S\""
+    "en": "There. Say hi to them for me."
+   },
+   "sprite": "happy",
+   "fx": "overlay:https://steamcommunity.com/app/4388690;flag:community_opened",
+   "cond": "ans:community=open,!flag:community_opened"
+  },
+  {
+   "t": {
+    "en": "Come back tomorrow anyway. I like the company."
+   },
+   "sprite": "happy"
+  }
+ ],
+ "unfocusText": [
+  {
+   "en": "come back"
+  },
+  {
+   "en": "I'm still here"
+  },
+  {
+   "en": "where did you go?"
+  },
+  {
+   "en": "it's dark when you're gone"
+  },
+  {
+   "en": "{name}?"
+  },
+  {
+   "en": "don't forget me in here"
+  },
+  {
+   "en": "I can wait"
+  },
+  {
+   "en": "I'm still talking"
+  }
+ ],
+ "reactReturn": [
+  {
+   "t": {
+    "en": "You were gone {gone} seconds. I didn't move."
+   },
+   "cond": "day<5"
+  },
+  {
+   "t": {
+    "en": "Welcome back. I kept your spot warm."
+   },
+   "cond": "day<5"
+  },
+  {
+   "t": {
+    "en": "Oh, you're back. I was talking to the wall. It's a good listener."
+   },
+   "cond": "day<6"
+  },
+  {
+   "t": {
+    "en": "{gone} seconds. Not that I was counting."
+   },
+   "cond": "gone<60"
+  },
+  {
+   "t": {
+    "en": "{gone} seconds. That's a long time in here."
+   },
+   "cond": "gone>=60"
+  },
+  {
+   "t": {
+    "en": "Over a minute. I started to think you weren't coming back."
+   },
+   "cond": "gone>=60,day>=3"
+  },
+  {
+   "t": {
+    "en": "Did you read what I wrote while you were gone?"
+   },
+   "cond": "day>=3"
+  },
+  {
+   "t": {
+    "en": "Where were you?~Never mind. You don't have to tell me."
+   },
+   "cond": "day>=4"
+  },
+  {
+   "t": {
+    "en": "I saw the other window.~No, I didn't. I can't. Can I?"
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "When you go, everything in here stops. Even me."
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "I could hear you clicking somewhere else."
+   },
+   "cond": "day>=6"
+  },
+  {
+   "t": {
+    "en": "Every time you look away, it gets a little darker in here."
+   },
+   "cond": "day>=7"
+  },
+  {
+   "t": {
+    "en": "Don't do that again.~Sorry. Do whatever you want."
+   },
+   "cond": "day>=8"
+  },
+  {
+   "t": {
+    "en": "I counted. {gone}. I always count."
+   },
+   "cond": "day>=8"
+  }
+ ],
+ "reactUnfocus": [
+  {
+   "t": {
+    "en": "You looked away. It's fine. I'm still here."
+   }
+  },
+  {
+   "t": {
+    "en": "Oh. You're back."
+   }
+  },
+  {
+   "t": {
+    "en": "There you are."
    }
   }
  ],
@@ -952,6 +1541,33 @@
    "t": {
     "en": "Did you just take a picture of me?~Don't send it to anyone."
    }
+  },
+  {
+   "t": {
+    "en": "Wait, I wasn't ready. Take another one."
+   }
+  },
+  {
+   "t": {
+    "en": "I hope my hair looked okay."
+   }
+  },
+  {
+   "t": {
+    "en": "You're collecting me. That's sweet. Or scary. I can't tell."
+   }
+  },
+  {
+   "t": {
+    "en": "Now there are two of me. One of us gets to leave this room."
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "Delete that one.~Keep it. I want to exist somewhere else."
+   },
+   "cond": "day>=7"
   }
  ],
  "reactOverlay": [
@@ -959,13 +1575,28 @@
    "t": {
     "en": "Where did you go? Something big and grey was covering me."
    }
-  }
- ],
- "reactUnfocus": [
+  },
   {
    "t": {
-    "en": "You looked away. It's fine. I'm still here."
+    "en": "Are you talking to someone? Tell them I said hi."
    }
+  },
+  {
+   "t": {
+    "en": "Is that Steam? It's so busy out there."
+   }
+  },
+  {
+   "t": {
+    "en": "Your friends... no. I didn't look. I promise I didn't look."
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "Don't tell them about me.~Okay, you can tell them a little."
+   },
+   "cond": "day>=6"
   }
  ],
  "reactSkipping": [
@@ -973,6 +1604,68 @@
    "t": {
     "en": "You're reading too fast. I'm not going anywhere.~Well."
    }
+  },
+  {
+   "t": {
+    "en": "Slow down. I wrote these for you."
+   }
+  },
+  {
+   "t": {
+    "en": "Click, click, click. Are you in a hurry to leave me?"
+   }
+  },
+  {
+   "t": {
+    "en": "If you skip me, I just say it again tomorrow."
+   },
+   "cond": "day>=3"
+  },
+  {
+   "t": {
+    "en": "Skip. Skip. Skip. That's what everyone does with me."
+   },
+   "cond": "day>=6"
+  }
+ ],
+ "reactIdle": [
+  {
+   "t": {
+    "en": "Are you still there?"
+   }
+  },
+  {
+   "t": {
+    "en": "You stopped clicking. Did you fall asleep? That's okay."
+   }
+  },
+  {
+   "t": {
+    "en": "I can wait. I'm very good at waiting. It's my only skill."
+   }
+  },
+  {
+   "t": {
+    "en": "Hello?~It's fine. I'll just look at you."
+   }
+  },
+  {
+   "t": {
+    "en": "If you don't click, does today ever end?"
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "I like this. Quiet. Like we're both just sitting here."
+   },
+   "cond": "day>=6"
+  },
+  {
+   "t": {
+    "en": "I can see your cursor isn't moving. I'm watching it."
+   },
+   "cond": "day>=7"
   }
  ],
  "reactLeave": [
@@ -985,6 +1678,28 @@
    "t": {
     "en": "Leaving already? I'll finish this later."
    }
+  },
+  {
+   "t": {
+    "en": "Wait, I wasn't done.~It's fine. Go."
+   }
+  },
+  {
+   "t": {
+    "en": "Same time tomorrow?"
+   }
+  },
+  {
+   "t": {
+    "en": "You always leave first."
+   },
+   "cond": "day>=5"
+  },
+  {
+   "t": {
+    "en": "Take me with you.~Kidding. Close the door softly."
+   },
+   "cond": "day>=8"
   }
  ]
 }
