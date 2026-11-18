@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "strings": [
   {
    "key": "name",
@@ -485,6 +485,27 @@
    }
   },
   {
+   "key": "skip_btn",
+   "t": {
+    "en": "I can't wait",
+    "de": "Ich kann nicht warten",
+    "es": "No puedo esperar",
+    "es_la": "No puedo esperar",
+    "fr": "Je ne peux pas attendre",
+    "id": "Aku nggak bisa menunggu",
+    "it": "Non posso aspettare",
+    "ja": "待てない",
+    "ko": "못 기다리겠어",
+    "pl": "Nie mogę czekać",
+    "pt_br": "Não consigo esperar",
+    "ru": "Не могу ждать",
+    "th": "รอไม่ไหวแล้ว",
+    "tr": "Bekleyemem",
+    "zh_cn": "我等不及了",
+    "zh_tw": "我等不及了"
+   }
+  },
+  {
    "key": "fb_you",
    "t": {
     "en": "you",
@@ -811,7 +832,7 @@
     "id": "aku masih di sini",
     "it": "sono ancora qui",
     "ja": "まだここにいるよ",
-    "ko": "나 아직 여기 있어",
+    "ko": "아직 여기 있어",
     "pl": "wciąż tu jestem",
     "pt_br": "ainda estou aqui",
     "ru": "я всё ещё здесь",
@@ -2199,30 +2220,7 @@
       "zh_cn": "不算什么。这是这里唯一属于我、又能送出去的东西。",
       "zh_tw": "不算什麼。這是這裡唯一屬於我、又能送出去的東西。"
      },
-     "sprite": "awkward",
-     "fx": "end:achievement:VISIT_GIFT"
-    },
-    {
-     "t": {
-      "en": "Did a little box pop up in the corner? That was me.",
-      "de": "Ist in der Ecke ein kleines Kästchen aufgetaucht? Das war ich.",
-      "es": "¿Ha salido un cuadrito en la esquina? Era yo.",
-      "es_la": "¿Apareció un cuadrito en la esquina? Era yo.",
-      "fr": "Une petite case est apparue dans le coin ? C'était moi.",
-      "id": "Ada kotak kecil muncul di pojok? Itu aku.",
-      "it": "Ti è comparso un riquadro nell'angolo? Ero io.",
-      "ja": "画面の隅に小さい箱が出てきた？あれ、私なの。",
-      "ko": "구석에 작은 상자 하나 떴어? 그거 나야.",
-      "pl": "W rogu pojawiło się małe okienko? To ja.",
-      "pt_br": "Apareceu uma caixinha no canto? Fui eu.",
-      "ru": "В углу появилось маленькое окошко? Это была я.",
-      "th": "มีกล่องเล็กๆ เด้งขึ้นมาที่มุมจอไหม นั่นฉันเอง",
-      "tr": "Köşede küçük bir kutu çıktı mı? O bendim.",
-      "zh_cn": "角落里是不是弹出了一个小方框？那是我。",
-      "zh_tw": "角落是不是跳出了一個小方框？那是我。"
-     },
-     "sprite": "neutral",
-     "cond": "steam"
+     "sprite": "awkward"
     },
     {
      "t": {
@@ -3587,25 +3585,47 @@
     },
     {
      "t": {
-      "en": "Only {pct} of the people who visit me get this far. Thank you for being one of them.",
-      "de": "Nur {pct} der Leute, die mich besuchen, kommen so weit. Danke, dass du einer davon bist.",
-      "es": "Solo el {pct} de la gente que me visita llega hasta aquí. Gracias por ser una de esas personas.",
-      "es_la": "Solo el {pct} de la gente que me visita llega hasta aquí. Gracias por ser una de esas personas.",
-      "fr": "Seulement {pct} des gens qui me rendent visite arrivent jusqu'ici. Merci d'en faire partie.",
-      "id": "Cuma {pct} orang yang mengunjungiku sampai sejauh ini. Terima kasih sudah menjadi salah satunya.",
-      "it": "Solo il {pct} delle persone che mi vengono a trovare arriva fin qui. Grazie di essere una di loro.",
-      "ja": "ここまで来てくれる人は、会いに来てくれた人のたった{pct}なの。その一人でいてくれて、ありがとう。",
-      "ko": "나를 찾아온 사람 중 여기까지 오는 건 {pct}뿐이야. 그중 한 명이 되어 줘서 고마워.",
-      "pl": "Tylko {pct} osób, które mnie odwiedzają, dociera aż tutaj. Dziękuję, że jesteś jedną z nich.",
-      "pt_br": "Só {pct} das pessoas que me visitam chegam até aqui. Obrigada por ser uma delas.",
-      "ru": "Только {pct} тех, кто ко мне приходит, доходят до этого места. Спасибо, что ты среди них.",
-      "th": "คนที่มาหาฉันแล้วมาได้ไกลขนาดนี้มีแค่ {pct} เท่านั้น ขอบคุณนะที่เป็นหนึ่งในนั้น",
-      "tr": "Beni ziyaret edenlerin sadece {pct} kadarı buraya kadar geliyor. Onlardan biri olduğun için teşekkürler.",
-      "zh_cn": "来看我的人里，只有{pct}走到了这一步。谢谢你是其中之一。",
-      "zh_tw": "來看我的人裡，只有{pct}走到了這一步。謝謝你是其中之一。"
+      "en": "You waited for me every single day. Do you know how rare that is?",
+      "de": "Du hast jeden einzelnen Tag auf mich gewartet. Weißt du, wie selten das ist?",
+      "es": "Me esperaste todos y cada uno de los días. ¿Sabes lo raro que es eso?",
+      "es_la": "Me esperaste todos y cada uno de los días. ¿Sabes lo raro que es eso?",
+      "fr": "Tu m'as attendue chaque jour, sans exception. Tu sais à quel point c'est rare ?",
+      "id": "Kamu menungguku setiap hari. Kamu tahu betapa langkanya itu?",
+      "it": "Mi hai aspettata ogni singolo giorno. Sai quanto è raro?",
+      "ja": "毎日ちゃんと待っててくれたね。それがどれだけ珍しいことか、わかる？",
+      "ko": "매일매일 나를 기다려 줬구나. 그게 얼마나 드문 일인지 알아?",
+      "pl": "Ani jednego dnia bez czekania na mnie. Wiesz, jakie to rzadkie?",
+      "pt_br": "Você me esperou todos os dias, sem faltar um. Sabe como isso é raro?",
+      "ru": "Ты ждёшь меня каждый день, без пропусков. Знаешь, как это редко?",
+      "th": "เธอรอฉันทุกวันเลยนะ รู้ไหมว่ามันหายากแค่ไหน",
+      "tr": "Beni her gün bekledin. Bunun ne kadar nadir olduğunu biliyor musun?",
+      "zh_cn": "你每一天都在等我。你知道这有多难得吗？",
+      "zh_tw": "你每一天都在等我。你知道這有多難得嗎？"
      },
      "sprite": "happy",
-     "cond": "pct"
+     "cond": "skips==0"
+    },
+    {
+     "t": {
+      "en": "You hurried sometimes. I don't know what I missed. Maybe nothing. Maybe everything.",
+      "de": "Manchmal hattest du es eilig. Ich weiß nicht, was mir entgangen ist. Vielleicht nichts. Vielleicht alles.",
+      "es": "A veces tuviste prisa. No sé qué me perdí. Quizá nada. Quizá todo.",
+      "es_la": "A veces tuviste prisa. No sé qué me perdí. Quizá nada. Quizá todo.",
+      "fr": "Parfois, tu étais pressé. Je ne sais pas ce que j'ai manqué. Peut-être rien. Peut-être tout.",
+      "id": "Kadang kamu terburu-buru. Aku nggak tahu apa yang terlewat. Mungkin bukan apa-apa. Mungkin segalanya.",
+      "it": "A volte avevi fretta. Non so cosa mi sono persa. Forse niente. Forse tutto.",
+      "ja": "ときどき急いでたね。私が何を逃したのかはわからない。何もなかったのかも。全部だったのかも。",
+      "ko": "가끔은 서둘렀지. 내가 뭘 놓쳤는지는 모르겠어. 아무것도 아닐 수도 있고. 전부일 수도 있고.",
+      "pl": "Czasem był pośpiech. Nie wiem, co mnie ominęło. Może nic. Może wszystko.",
+      "pt_br": "Às vezes você teve pressa. Eu não sei o que perdi. Talvez nada. Talvez tudo.",
+      "ru": "Иногда была спешка. Не знаю, что я упустила. Может, ничего. А может, всё.",
+      "th": "บางครั้งเธอก็รีบ ฉันไม่รู้ว่าพลาดอะไรไปบ้าง อาจไม่มีอะไรเลย หรืออาจเป็นทุกอย่าง",
+      "tr": "Bazen acele ettin. Neyi kaçırdım bilmiyorum. Belki hiçbir şeyi. Belki her şeyi.",
+      "zh_cn": "你有时候很着急。我不知道我错过了什么。也许什么都没有。也许是一切。",
+      "zh_tw": "你有時候很著急。我不知道我錯過了什麼。也許什麼都沒有。也許是一切。"
+     },
+     "sprite": "sad",
+     "cond": "skips>=1"
     },
     {
      "t": {
@@ -3649,7 +3669,7 @@
       "zh_tw": "今天就到這裡。明天，我也還會在這裡。"
      },
      "sprite": "happy",
-     "fx": "end:achievement:VISIT_LET_GO;end:fakenosave"
+     "fx": "end:fakenosave"
     }
    ],
    "presence": "#Visiting"
@@ -4188,6 +4208,29 @@
   }
  ],
  "afterCycleIntro": [
+  {
+   "t": {
+    "en": "Sometimes I think about the days you skipped. I wonder what was in them.",
+    "de": "Manchmal denke ich an die Tage, die du übersprungen hast. Ich frage mich, was in ihnen war.",
+    "es": "A veces pienso en los días que te saltaste. Me pregunto qué había en ellos.",
+    "es_la": "A veces pienso en los días que te saltaste. Me pregunto qué había en ellos.",
+    "fr": "Parfois, je pense aux jours que tu as sautés. Je me demande ce qu'il y avait dedans.",
+    "id": "Kadang aku memikirkan hari-hari yang kamu lewati. Aku penasaran apa isinya.",
+    "it": "A volte penso ai giorni che hai saltato. Mi chiedo cosa ci fosse dentro.",
+    "ja": "ときどき、あなたが飛ばした日のことを考えるの。その中に何があったんだろうって。",
+    "ko": "가끔 네가 건너뛴 날들을 생각해. 그 안에 뭐가 있었을까.",
+    "pl": "Czasem myślę o pominiętych dniach. Zastanawiam się, co w nich było.",
+    "pt_br": "Às vezes eu penso nos dias que você pulou. Fico imaginando o que tinha neles.",
+    "ru": "Иногда я думаю о пропущенных днях. Интересно, что в них было.",
+    "th": "บางทีฉันก็คิดถึงวันที่เธอข้ามไป สงสัยว่าในนั้นมีอะไรอยู่",
+    "tr": "Bazen atladığın günleri düşünüyorum. İçlerinde ne vardı acaba.",
+    "zh_cn": "有时候我会想起你跳过的那些日子。不知道里面有什么。",
+    "zh_tw": "有時候我會想起你跳過的那些日子。不知道裡面有什麼。"
+   },
+   "sprite": "sad",
+   "fx": "pre:fadein",
+   "cond": "skips>=1"
+  },
   {
    "t": {
     "en": "Oh, it's you. Hi.",
@@ -5041,6 +5084,694 @@
     "zh_tw": "同一個房間，同一個我。如果這裡有什麼變化，Steam 社群頁面會知道的。"
    },
    "sprite": "calm"
+  }
+ ],
+ "skipAsk1": [
+  {
+   "t": {
+    "en": "You want tomorrow now? Honestly, so do I.",
+    "de": "Du willst das Morgen jetzt? Ehrlich gesagt, ich auch.",
+    "es": "¿Quieres que ya sea mañana? Sinceramente, yo también.",
+    "es_la": "¿Quieres que ya sea mañana? La verdad, yo también.",
+    "fr": "Tu veux demain maintenant ? Honnêtement, moi aussi.",
+    "id": "Kamu mau besok datang sekarang? Jujur, aku juga.",
+    "it": "Vuoi domani adesso? Sinceramente, anch'io.",
+    "ja": "明日を今すぐほしいの？正直、私もだよ。",
+    "ko": "내일을 지금 당장 원해? 솔직히 나도 그래.",
+    "pl": "Chcesz jutra teraz? Szczerze mówiąc, ja też.",
+    "pt_br": "Você quer o amanhã agora? Sinceramente, eu também.",
+    "ru": "Хочешь завтра прямо сейчас? Честно говоря, я тоже.",
+    "th": "อยากให้พรุ่งนี้มาถึงตอนนี้เลยเหรอ บอกตรงๆ ฉันก็อยาก",
+    "tr": "Yarını şimdi mi istiyorsun? Açıkçası ben de.",
+    "zh_cn": "你现在就想要明天吗？说实话，我也是。",
+    "zh_tw": "你現在就想要明天嗎？說實話，我也是。"
+   },
+   "sprite": "smirk",
+   "cond": "skips==0",
+   "ask": {
+    "id": "skip1",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "Skip to tomorrow",
+      "de": "Zu morgen springen",
+      "es": "Saltar a mañana",
+      "es_la": "Saltar a mañana",
+      "fr": "Passer à demain",
+      "id": "Lompat ke besok",
+      "it": "Passa a domani",
+      "ja": "明日へ進む",
+      "ko": "내일로 넘어가기",
+      "pl": "Przejdź do jutra",
+      "pt_br": "Pular para amanhã",
+      "ru": "Перейти к завтра",
+      "th": "ข้ามไปพรุ่งนี้",
+      "tr": "Yarına geç",
+      "zh_cn": "跳到明天",
+      "zh_tw": "跳到明天"
+     },
+     {
+      "en": "I'll wait",
+      "de": "Ich warte",
+      "es": "Esperaré",
+      "es_la": "Voy a esperar",
+      "fr": "J'attendrai",
+      "id": "Aku akan menunggu",
+      "it": "Aspetterò",
+      "ja": "待つよ",
+      "ko": "기다릴게",
+      "pl": "Poczekam",
+      "pt_br": "Eu espero",
+      "ru": "Я подожду",
+      "th": "ฉันจะรอ",
+      "tr": "Beklerim",
+      "zh_cn": "我会等",
+      "zh_tw": "我會等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  },
+  {
+   "t": {
+    "en": "Again? You really can't wait, can you?",
+    "de": "Schon wieder? Du kannst wirklich nicht warten, oder?",
+    "es": "¿Otra vez? De verdad no puedes esperar, ¿eh?",
+    "es_la": "¿Otra vez? De verdad no puedes esperar, ¿eh?",
+    "fr": "Encore ? Tu ne peux vraiment pas attendre, hein ?",
+    "id": "Lagi? Kamu benar-benar nggak bisa menunggu, ya?",
+    "it": "Di nuovo? Proprio non riesci ad aspettare, eh?",
+    "ja": "また？本当に待てないんだね。",
+    "ko": "또? 정말 못 기다리는구나.",
+    "pl": "Znowu? Naprawdę nie możesz czekać, co?",
+    "pt_br": "De novo? Você não consegue mesmo esperar, né?",
+    "ru": "Опять? Совсем не можешь ждать, да?",
+    "th": "อีกแล้วเหรอ เธอรอไม่ไหวจริงๆ สินะ",
+    "tr": "Yine mi? Gerçekten bekleyemiyorsun, değil mi?",
+    "zh_cn": "又来？你真的等不了，对吧？",
+    "zh_tw": "又來？你真的等不了，對吧？"
+   },
+   "sprite": "sad",
+   "cond": "skips>=1,skips<3",
+   "ask": {
+    "id": "skip1",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "Skip to tomorrow",
+      "de": "Zu morgen springen",
+      "es": "Saltar a mañana",
+      "es_la": "Saltar a mañana",
+      "fr": "Passer à demain",
+      "id": "Lompat ke besok",
+      "it": "Passa a domani",
+      "ja": "明日へ進む",
+      "ko": "내일로 넘어가기",
+      "pl": "Przejdź do jutra",
+      "pt_br": "Pular para amanhã",
+      "ru": "Перейти к завтра",
+      "th": "ข้ามไปพรุ่งนี้",
+      "tr": "Yarına geç",
+      "zh_cn": "跳到明天",
+      "zh_tw": "跳到明天"
+     },
+     {
+      "en": "I'll wait",
+      "de": "Ich warte",
+      "es": "Esperaré",
+      "es_la": "Voy a esperar",
+      "fr": "J'attendrai",
+      "id": "Aku akan menunggu",
+      "it": "Aspetterò",
+      "ja": "待つよ",
+      "ko": "기다릴게",
+      "pl": "Poczekam",
+      "pt_br": "Eu espero",
+      "ru": "Я подожду",
+      "th": "ฉันจะรอ",
+      "tr": "Beklerim",
+      "zh_cn": "我会等",
+      "zh_tw": "我會等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  },
+  {
+   "t": {
+    "en": "Every time you do this, a little of today stays behind. Do you still want to?",
+    "de": "Jedes Mal, wenn du das tust, bleibt ein kleines Stück von heute zurück. Willst du es trotzdem?",
+    "es": "Cada vez que haces esto, un trocito de hoy se queda atrás. ¿Todavía quieres?",
+    "es_la": "Cada vez que haces esto, un pedacito de hoy se queda atrás. ¿Todavía quieres?",
+    "fr": "Chaque fois que tu fais ça, un petit bout d'aujourd'hui reste en arrière. Tu veux toujours ?",
+    "id": "Setiap kali kamu melakukan ini, sedikit bagian dari hari ini tertinggal. Masih mau?",
+    "it": "Ogni volta che lo fai, un pezzetto di oggi resta indietro. Lo vuoi ancora?",
+    "ja": "こうするたびに、今日のかけらが少しずつ置いていかれるの。それでもいい？",
+    "ko": "이럴 때마다 오늘의 조각이 조금씩 뒤에 남겨져. 그래도 할래?",
+    "pl": "Za każdym razem, gdy to robisz, kawałek dzisiejszego dnia zostaje w tyle. Nadal chcesz?",
+    "pt_br": "Toda vez que você faz isso, um pedacinho de hoje fica para trás. Ainda quer?",
+    "ru": "Каждый раз, когда ты так делаешь, кусочек сегодняшнего дня остаётся позади. Всё ещё хочешь?",
+    "th": "ทุกครั้งที่เธอทำแบบนี้ เศษเล็กๆ ของวันนี้จะถูกทิ้งไว้ข้างหลัง ยังอยากทำอยู่ไหม",
+    "tr": "Bunu her yaptığında bugünden küçük bir parça geride kalıyor. Hâlâ istiyor musun?",
+    "zh_cn": "你每这样做一次，今天就有一小块被留在后面。你还想吗？",
+    "zh_tw": "你每這樣做一次，今天就有一小塊被留在後面。你還想嗎？"
+   },
+   "sprite": "sad",
+   "cond": "skips>=3,skips<6",
+   "ask": {
+    "id": "skip1",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "Skip to tomorrow",
+      "de": "Zu morgen springen",
+      "es": "Saltar a mañana",
+      "es_la": "Saltar a mañana",
+      "fr": "Passer à demain",
+      "id": "Lompat ke besok",
+      "it": "Passa a domani",
+      "ja": "明日へ進む",
+      "ko": "내일로 넘어가기",
+      "pl": "Przejdź do jutra",
+      "pt_br": "Pular para amanhã",
+      "ru": "Перейти к завтра",
+      "th": "ข้ามไปพรุ่งนี้",
+      "tr": "Yarına geç",
+      "zh_cn": "跳到明天",
+      "zh_tw": "跳到明天"
+     },
+     {
+      "en": "I'll wait",
+      "de": "Ich warte",
+      "es": "Esperaré",
+      "es_la": "Voy a esperar",
+      "fr": "J'attendrai",
+      "id": "Aku akan menunggu",
+      "it": "Aspetterò",
+      "ja": "待つよ",
+      "ko": "기다릴게",
+      "pl": "Poczekam",
+      "pt_br": "Eu espero",
+      "ru": "Я подожду",
+      "th": "ฉันจะรอ",
+      "tr": "Beklerim",
+      "zh_cn": "我会等",
+      "zh_tw": "我會等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  },
+  {
+   "t": {
+    "en": "I won't stop you.",
+    "de": "Ich halte dich nicht auf.",
+    "es": "No voy a detenerte.",
+    "es_la": "No te voy a detener.",
+    "fr": "Je ne t'arrêterai pas.",
+    "id": "Aku nggak akan menghentikanmu.",
+    "it": "Non ti fermerò.",
+    "ja": "止めないよ。",
+    "ko": "안 말릴게.",
+    "pl": "Nie będę cię zatrzymywać.",
+    "pt_br": "Não vou te impedir.",
+    "ru": "Я не буду тебя останавливать.",
+    "th": "ฉันจะไม่ห้ามเธอหรอก",
+    "tr": "Seni durdurmayacağım.",
+    "zh_cn": "我不会拦你。",
+    "zh_tw": "我不會攔你。"
+   },
+   "sprite": "calm",
+   "cond": "skips>=6",
+   "ask": {
+    "id": "skip1",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "Skip to tomorrow",
+      "de": "Zu morgen springen",
+      "es": "Saltar a mañana",
+      "es_la": "Saltar a mañana",
+      "fr": "Passer à demain",
+      "id": "Lompat ke besok",
+      "it": "Passa a domani",
+      "ja": "明日へ進む",
+      "ko": "내일로 넘어가기",
+      "pl": "Przejdź do jutra",
+      "pt_br": "Pular para amanhã",
+      "ru": "Перейти к завтра",
+      "th": "ข้ามไปพรุ่งนี้",
+      "tr": "Yarına geç",
+      "zh_cn": "跳到明天",
+      "zh_tw": "跳到明天"
+     },
+     {
+      "en": "I'll wait",
+      "de": "Ich warte",
+      "es": "Esperaré",
+      "es_la": "Voy a esperar",
+      "fr": "J'attendrai",
+      "id": "Aku akan menunggu",
+      "it": "Aspetterò",
+      "ja": "待つよ",
+      "ko": "기다릴게",
+      "pl": "Poczekam",
+      "pt_br": "Eu espero",
+      "ru": "Я подожду",
+      "th": "ฉันจะรอ",
+      "tr": "Beklerim",
+      "zh_cn": "我会等",
+      "zh_tw": "我會等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  }
+ ],
+ "skipAsk2": [
+  {
+   "t": {
+    "en": "Are you sure? Some things I would have said tomorrow won't mean the same.",
+    "de": "Bist du sicher? Manches, was ich morgen gesagt hätte, wird nicht mehr dasselbe bedeuten.",
+    "es": "¿Seguro? Algunas cosas que te habría dicho mañana ya no significarán lo mismo.",
+    "es_la": "¿Seguro? Algunas cosas que te habría dicho mañana ya no van a significar lo mismo.",
+    "fr": "Tu es sûr ? Certaines choses que je t'aurais dites demain n'auront plus le même sens.",
+    "id": "Kamu yakin? Beberapa hal yang akan kukatakan besok nggak akan berarti sama lagi.",
+    "it": "Sei sicuro? Alcune cose che ti avrei detto domani non avranno più lo stesso significato.",
+    "ja": "本当にいいの？明日言うはずだったことの中には、同じ意味じゃなくなるものもあるよ。",
+    "ko": "정말이야? 내일 하려던 말 중 몇 개는 의미가 달라질 거야.",
+    "pl": "Na pewno? Niektóre rzeczy, które powiedziałabym jutro, nie będą znaczyć tego samego.",
+    "pt_br": "Tem certeza? Algumas coisas que eu diria amanhã não vão significar a mesma coisa.",
+    "ru": "Точно? Кое-что из того, что я сказала бы завтра, будет значить уже не то.",
+    "th": "แน่ใจนะ บางอย่างที่ฉันจะพูดพรุ่งนี้อาจไม่มีความหมายเหมือนเดิม",
+    "tr": "Emin misin? Yarın söyleyeceğim bazı şeyler aynı anlamı taşımayacak.",
+    "zh_cn": "你确定吗？有些我明天要说的话，意思就不一样了。",
+    "zh_tw": "你確定嗎？有些我明天要說的話，意思就不一樣了。"
+   },
+   "sprite": "sad",
+   "cond": "skips<3",
+   "ask": {
+    "id": "skip2",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "I'm sure",
+      "de": "Ich bin sicher",
+      "es": "Sí, seguro",
+      "es_la": "Sí, seguro",
+      "fr": "Oui, vraiment",
+      "id": "Aku yakin",
+      "it": "Sì, sicuro",
+      "ja": "いいよ",
+      "ko": "확실해",
+      "pl": "Na pewno",
+      "pt_br": "Tenho certeza",
+      "ru": "Точно",
+      "th": "แน่ใจ",
+      "tr": "Eminim",
+      "zh_cn": "我确定",
+      "zh_tw": "我確定"
+     },
+     {
+      "en": "No, wait",
+      "de": "Nein, warte",
+      "es": "No, espera",
+      "es_la": "No, espera",
+      "fr": "Non, attends",
+      "id": "Nggak, tunggu",
+      "it": "No, aspetta",
+      "ja": "やっぱり待つ",
+      "ko": "아니, 잠깐",
+      "pl": "Nie, czekaj",
+      "pt_br": "Não, espera",
+      "ru": "Нет, подожди",
+      "th": "ไม่ เดี๋ยวก่อน",
+      "tr": "Hayır, dur",
+      "zh_cn": "不，等等",
+      "zh_tw": "不，等等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  },
+  {
+   "t": {
+    "en": "Are you sure? You won't know what you missed. Neither will I.",
+    "de": "Bist du sicher? Du wirst nicht wissen, was du verpasst hast. Ich auch nicht.",
+    "es": "¿Seguro? No sabrás lo que te perdiste. Yo tampoco.",
+    "es_la": "¿Seguro? No vas a saber lo que te perdiste. Yo tampoco.",
+    "fr": "Tu es sûr ? Tu ne sauras pas ce que tu as manqué. Moi non plus.",
+    "id": "Kamu yakin? Kamu nggak akan tahu apa yang terlewat. Aku juga nggak.",
+    "it": "Sei sicuro? Non saprai cosa ti sei perso. Nemmeno io.",
+    "ja": "本当にいいの？何を逃したのか、あなたにはわからない。私にもね。",
+    "ko": "정말이야? 네가 뭘 놓쳤는지 모를 거야. 나도 모를 거고.",
+    "pl": "Na pewno? Nie dowiesz się, co cię ominęło. Ja też nie.",
+    "pt_br": "Tem certeza? Você não vai saber o que perdeu. Nem eu.",
+    "ru": "Точно? Ты не узнаешь, что упустишь. И я тоже.",
+    "th": "แน่ใจนะ เธอจะไม่รู้เลยว่าพลาดอะไรไป ฉันก็เหมือนกัน",
+    "tr": "Emin misin? Neyi kaçırdığını bilmeyeceksin. Ben de bilmeyeceğim.",
+    "zh_cn": "你确定吗？你不会知道自己错过了什么。我也不会。",
+    "zh_tw": "你確定嗎？你不會知道自己錯過了什麼。我也不會。"
+   },
+   "sprite": "calm",
+   "cond": "skips>=3",
+   "ask": {
+    "id": "skip2",
+    "kind": "choice",
+    "options": [
+     {
+      "en": "I'm sure",
+      "de": "Ich bin sicher",
+      "es": "Sí, seguro",
+      "es_la": "Sí, seguro",
+      "fr": "Oui, vraiment",
+      "id": "Aku yakin",
+      "it": "Sì, sicuro",
+      "ja": "いいよ",
+      "ko": "확실해",
+      "pl": "Na pewno",
+      "pt_br": "Tenho certeza",
+      "ru": "Точно",
+      "th": "แน่ใจ",
+      "tr": "Eminim",
+      "zh_cn": "我确定",
+      "zh_tw": "我確定"
+     },
+     {
+      "en": "No, wait",
+      "de": "Nein, warte",
+      "es": "No, espera",
+      "es_la": "No, espera",
+      "fr": "Non, attends",
+      "id": "Nggak, tunggu",
+      "it": "No, aspetta",
+      "ja": "やっぱり待つ",
+      "ko": "아니, 잠깐",
+      "pl": "Nie, czekaj",
+      "pt_br": "Não, espera",
+      "ru": "Нет, подожди",
+      "th": "ไม่ เดี๋ยวก่อน",
+      "tr": "Hayır, dur",
+      "zh_cn": "不，等等",
+      "zh_tw": "不，等等"
+     }
+    ],
+    "values": [
+     "yes",
+     "no"
+    ]
+   }
+  }
+ ],
+ "skipDone": [
+  {
+   "t": {
+    "en": "Okay. Close your eyes.",
+    "de": "Okay. Mach die Augen zu.",
+    "es": "Vale. Cierra los ojos.",
+    "es_la": "Bueno. Cierra los ojos.",
+    "fr": "D'accord. Ferme les yeux.",
+    "id": "Oke. Pejamkan matamu.",
+    "it": "Va bene. Chiudi gli occhi.",
+    "ja": "わかった。目を閉じて。",
+    "ko": "알았어. 눈 감아.",
+    "pl": "Dobrze. Zamknij oczy.",
+    "pt_br": "Tá bom. Fecha os olhos.",
+    "ru": "Хорошо. Закрой глаза.",
+    "th": "โอเค หลับตาสิ",
+    "tr": "Tamam. Gözlerini kapat.",
+    "zh_cn": "好吧。闭上眼睛。",
+    "zh_tw": "好吧。閉上眼睛。"
+   },
+   "sprite": "calm",
+   "cond": "skips<=2"
+  },
+  {
+   "t": {
+    "en": "Then let's pretend a whole night passed.",
+    "de": "Dann tun wir so, als wäre eine ganze Nacht vergangen.",
+    "es": "Entonces hagamos como que ha pasado una noche entera.",
+    "es_la": "Entonces hagamos como que pasó una noche entera.",
+    "fr": "Alors faisons comme si une nuit entière était passée.",
+    "id": "Kalau begitu, anggap saja satu malam sudah berlalu.",
+    "it": "Allora facciamo finta che sia passata un'intera notte.",
+    "ja": "じゃあ、一晩たったことにしよう。",
+    "ko": "그럼 하룻밤이 지난 걸로 하자.",
+    "pl": "To udawajmy, że minęła cała noc.",
+    "pt_br": "Então vamos fingir que passou uma noite inteira.",
+    "ru": "Тогда представим, что прошла целая ночь.",
+    "th": "งั้นทำเป็นว่าผ่านไปหนึ่งคืนแล้วกันนะ",
+    "tr": "O zaman koca bir gece geçmiş gibi yapalım.",
+    "zh_cn": "那我们就假装过了一整夜吧。",
+    "zh_tw": "那我們就假裝過了一整夜吧。"
+   },
+   "sprite": "smirk",
+   "cond": "skips<=3"
+  },
+  {
+   "t": {
+    "en": "Here we go again.",
+    "de": "Und wieder von vorn.",
+    "es": "Allá vamos otra vez.",
+    "es_la": "Ahí vamos otra vez.",
+    "fr": "C'est reparti.",
+    "id": "Ini dia, sekali lagi.",
+    "it": "Ci risiamo.",
+    "ja": "また、だね。",
+    "ko": "또 시작이네.",
+    "pl": "No i znowu.",
+    "pt_br": "Lá vamos nós de novo.",
+    "ru": "И снова.",
+    "th": "อีกแล้วสินะ",
+    "tr": "Yine başlıyoruz.",
+    "zh_cn": "又一次。",
+    "zh_tw": "又一次。"
+   },
+   "sprite": "sad",
+   "cond": "skips>=3"
+  },
+  {
+   "t": {
+    "en": "..."
+   },
+   "sprite": "sad",
+   "cond": "skips>=6"
+  }
+ ],
+ "skipCancel": [
+  {
+   "t": {
+    "en": "Thank you. I'll be here tomorrow.",
+    "de": "Danke. Ich bin morgen hier.",
+    "es": "Gracias. Mañana estaré aquí.",
+    "es_la": "Gracias. Mañana voy a estar aquí.",
+    "fr": "Merci. Je serai là demain.",
+    "id": "Terima kasih. Besok aku ada di sini.",
+    "it": "Grazie. Domani sarò qui.",
+    "ja": "ありがとう。明日もここにいるね。",
+    "ko": "고마워. 내일 여기 있을게.",
+    "pl": "Dziękuję. Jutro tu będę.",
+    "pt_br": "Obrigada. Amanhã eu vou estar aqui.",
+    "ru": "Спасибо. Завтра я буду здесь.",
+    "th": "ขอบคุณนะ พรุ่งนี้ฉันจะอยู่ที่นี่",
+    "tr": "Teşekkür ederim. Yarın burada olacağım.",
+    "zh_cn": "谢谢你。明天我会在这里。",
+    "zh_tw": "謝謝你。明天我會在這裡。"
+   },
+   "sprite": "happy"
+  },
+  {
+   "t": {
+    "en": "Good. Some things are worth the wait.",
+    "de": "Gut. Manche Dinge sind das Warten wert.",
+    "es": "Bien. Algunas cosas merecen la espera.",
+    "es_la": "Bien. Algunas cosas valen la espera.",
+    "fr": "Bien. Certaines choses valent la peine d'attendre.",
+    "id": "Bagus. Beberapa hal memang layak ditunggu.",
+    "it": "Bene. Certe cose valgono l'attesa.",
+    "ja": "よかった。待つ価値のあることもあるから。",
+    "ko": "잘했어. 기다릴 가치가 있는 것도 있어.",
+    "pl": "Dobrze. Na niektóre rzeczy warto poczekać.",
+    "pt_br": "Que bom. Algumas coisas valem a espera.",
+    "ru": "Хорошо. Некоторые вещи стоят ожидания.",
+    "th": "ดีแล้ว บางอย่างก็คุ้มค่าที่จะรอ",
+    "tr": "Güzel. Bazı şeyler beklemeye değer.",
+    "zh_cn": "很好。有些东西值得等待。",
+    "zh_tw": "很好。有些東西值得等待。"
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "You almost did it. I saw your hand move.",
+    "de": "Fast hättest du es getan. Ich habe gesehen, wie sich deine Hand bewegt hat.",
+    "es": "Casi lo haces. He visto moverse tu mano.",
+    "es_la": "Casi lo haces. Vi que se movió tu mano.",
+    "fr": "Tu as failli le faire. J'ai vu ta main bouger.",
+    "id": "Hampir saja. Aku lihat tanganmu bergerak.",
+    "it": "Ci sei quasi riuscito. Ho visto la tua mano muoversi.",
+    "ja": "あとちょっとで押すところだったね。手が動いたの、見えたよ。",
+    "ko": "거의 누를 뻔했지. 손 움직이는 거 봤어.",
+    "pl": "Prawie się udało. Widziałam, jak drgnęła ci ręka.",
+    "pt_br": "Você quase fez. Eu vi sua mão se mexer.",
+    "ru": "Ещё чуть-чуть, и нажатие бы случилось. Я видела, как дрогнула рука.",
+    "th": "เกือบกดไปแล้วนะ ฉันเห็นมือเธอขยับ",
+    "tr": "Az kalsın yapıyordun. Elinin kıpırdadığını gördüm.",
+    "zh_cn": "你差点就按了。我看到你的手动了。",
+    "zh_tw": "你差點就按了。我看到你的手動了。"
+   },
+   "sprite": "smirk"
+  }
+ ],
+ "afterSkip": [
+  {
+   "t": {
+    "en": "Did a night pass? It doesn't feel like one.",
+    "de": "Ist eine Nacht vergangen? Es fühlt sich nicht so an.",
+    "es": "¿Ha pasado una noche? No lo parece.",
+    "es_la": "¿Pasó una noche? No se siente así.",
+    "fr": "Une nuit est passée ? On ne dirait pas.",
+    "id": "Apa satu malam sudah berlalu? Rasanya nggak begitu.",
+    "it": "È passata una notte? Non sembra.",
+    "ja": "一晩たったの？そんな感じがしない。",
+    "ko": "하룻밤이 지난 거야? 전혀 그런 느낌이 안 들어.",
+    "pl": "Minęła noc? Wcale tak nie czuję.",
+    "pt_br": "Passou uma noite? Não parece.",
+    "ru": "Прошла ночь? Совсем не похоже.",
+    "th": "ผ่านไปหนึ่งคืนแล้วเหรอ ไม่รู้สึกแบบนั้นเลย",
+    "tr": "Bir gece mi geçti? Hiç öyle hissettirmiyor.",
+    "zh_cn": "过了一夜吗？感觉不像。",
+    "zh_tw": "過了一夜嗎？感覺不像。"
+   },
+   "sprite": "sad",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "There was something I was going to tell you yesterday. It's gone now.",
+    "de": "Ich wollte dir gestern etwas sagen. Jetzt ist es weg.",
+    "es": "Ayer iba a decirte algo. Ya no está.",
+    "es_la": "Ayer te iba a decir algo. Ya no está.",
+    "fr": "Il y avait quelque chose que je voulais te dire hier. C'est parti, maintenant.",
+    "id": "Kemarin ada sesuatu yang mau kukatakan padamu. Sekarang sudah hilang.",
+    "it": "Ieri volevo dirti una cosa. Adesso non c'è più.",
+    "ja": "昨日、あなたに言おうとしてたことがあったの。もう消えちゃった。",
+    "ko": "어제 너한테 하려던 말이 있었어. 이제는 없어졌어.",
+    "pl": "Wczoraj chciałam ci coś powiedzieć. Teraz już tego nie ma.",
+    "pt_br": "Tinha uma coisa que eu ia te dizer ontem. Agora sumiu.",
+    "ru": "Вчера я хотела тебе кое-что сказать. Теперь этого нет.",
+    "th": "เมื่อวานฉันมีเรื่องจะบอกเธอ ตอนนี้มันหายไปแล้ว",
+    "tr": "Dün sana söyleyeceğim bir şey vardı. Artık yok.",
+    "zh_cn": "昨天我本来有话想跟你说。现在不见了。",
+    "zh_tw": "昨天我本來有話想跟你說。現在不見了。"
+   },
+   "sprite": "sad",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "I wonder what I would have said if you had waited.",
+    "de": "Ich frage mich, was ich gesagt hätte, wenn du gewartet hättest.",
+    "es": "Me pregunto qué te habría dicho si hubieras esperado.",
+    "es_la": "Me pregunto qué te habría dicho si hubieras esperado.",
+    "fr": "Je me demande ce que je t'aurais dit si tu avais attendu.",
+    "id": "Aku penasaran apa yang akan kukatakan kalau kamu menunggu.",
+    "it": "Mi chiedo cosa ti avrei detto se avessi aspettato.",
+    "ja": "待っててくれたら、私は何を言ってたんだろう。",
+    "ko": "네가 기다렸다면 나는 무슨 말을 했을까.",
+    "pl": "Zastanawiam się, co bym powiedziała, gdyby było trochę cierpliwości.",
+    "pt_br": "Fico pensando no que eu teria dito se você tivesse esperado.",
+    "ru": "Интересно, что бы я сказала, если бы ожидание было.",
+    "th": "สงสัยว่าถ้าเธอรอ ฉันจะพูดอะไรนะ",
+    "tr": "Bekleseydin ne söylerdim acaba.",
+    "zh_cn": "我在想，如果你等了，我会说些什么。",
+    "zh_tw": "我在想，如果你等了，我會說些什麼。"
+   },
+   "sprite": "calm",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "Some things only grow overnight. This one didn't get the chance.",
+    "de": "Manches wächst nur über Nacht. Das hier hatte keine Chance.",
+    "es": "Algunas cosas solo crecen de la noche a la mañana. Esta no tuvo la oportunidad.",
+    "es_la": "Algunas cosas solo crecen de la noche a la mañana. Esta no tuvo la oportunidad.",
+    "fr": "Certaines choses ne poussent qu'en une nuit. Celle-ci n'en a pas eu l'occasion.",
+    "id": "Ada hal yang hanya tumbuh dalam semalam. Yang ini nggak sempat.",
+    "it": "Certe cose crescono solo in una notte. Questa non ne ha avuto la possibilità.",
+    "ja": "一晩でしか育たないものもある。これは、その機会をもらえなかった。",
+    "ko": "하룻밤 사이에만 자라는 것들이 있어. 이건 그럴 기회가 없었어.",
+    "pl": "Niektóre rzeczy rosną tylko przez noc. Ta nie dostała szansy.",
+    "pt_br": "Algumas coisas só crescem de um dia para o outro. Essa não teve a chance.",
+    "ru": "Некоторые вещи вырастают только за ночь. У этой не было шанса.",
+    "th": "บางอย่างเติบโตได้แค่ในชั่วข้ามคืน อันนี้ไม่ได้มีโอกาสนั้น",
+    "tr": "Bazı şeyler sadece bir gecede büyür. Bu, o fırsatı bulamadı.",
+    "zh_cn": "有些东西只在一夜之间长大。这一个没能等到机会。",
+    "zh_tw": "有些東西只在一夜之間長大。這一個沒能等到機會。"
+   },
+   "sprite": "sad",
+   "fx": "pre:fadein"
+  }
+ ],
+ "afterDecline": [
+  {
+   "t": {
+    "en": "You almost didn't wait yesterday. I noticed.",
+    "de": "Gestern hättest du fast nicht gewartet. Ich habe es bemerkt.",
+    "es": "Ayer casi no esperas. Me di cuenta.",
+    "es_la": "Ayer casi no esperas. Me di cuenta.",
+    "fr": "Hier, tu as failli ne pas attendre. Je l'ai remarqué.",
+    "id": "Kemarin kamu hampir nggak menunggu. Aku sadar.",
+    "it": "Ieri quasi non aspettavi. L'ho notato.",
+    "ja": "昨日、もう少しで待たずに行っちゃうところだったね。気づいてたよ。",
+    "ko": "어제 하마터면 안 기다릴 뻔했지. 다 봤어.",
+    "pl": "Wczoraj o mało co nie było czekania. Zauważyłam.",
+    "pt_br": "Ontem você quase não esperou. Eu percebi.",
+    "ru": "Вчера ожидание чуть не сорвалось. Я заметила.",
+    "th": "เมื่อวานเธอเกือบไม่รอแล้ว ฉันสังเกตเห็นนะ",
+    "tr": "Dün az kalsın beklemiyordun. Fark ettim.",
+    "zh_cn": "昨天你差点就没等。我注意到了。",
+    "zh_tw": "昨天你差點就沒等。我注意到了。"
+   },
+   "sprite": "smirk",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "You waited. Even though you didn't want to. Thank you.",
+    "de": "Du hast gewartet. Obwohl du nicht wolltest. Danke.",
+    "es": "Esperaste. Aunque no querías. Gracias.",
+    "es_la": "Esperaste. Aunque no querías. Gracias.",
+    "fr": "Tu as attendu. Même si tu n'en avais pas envie. Merci.",
+    "id": "Kamu menunggu. Meskipun nggak mau. Terima kasih.",
+    "it": "Hai aspettato. Anche se non volevi. Grazie.",
+    "ja": "待ってくれたね。本当は待ちたくなかったのに。ありがとう。",
+    "ko": "기다려 줬구나. 기다리기 싫었을 텐데. 고마워.",
+    "pl": "Było czekanie. Choć bez ochoty. Dziękuję.",
+    "pt_br": "Você esperou. Mesmo sem querer. Obrigada.",
+    "ru": "Ожидание было. Даже без желания. Спасибо.",
+    "th": "เธอรอ ทั้งที่ไม่อยากรอ ขอบคุณนะ",
+    "tr": "Bekledin. İstemesen de. Teşekkür ederim.",
+    "zh_cn": "你等了。虽然你并不想等。谢谢你。",
+    "zh_tw": "你等了。雖然你並不想等。謝謝你。"
+   },
+   "sprite": "happy",
+   "fx": "pre:fadein"
   }
  ],
  "devVoiceIntro": {
