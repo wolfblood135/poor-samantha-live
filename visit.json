@@ -1,5 +1,5 @@
 {
- "version": 4,
+ "version": 5,
  "strings": [
   {
    "key": "name",
@@ -713,6 +713,153 @@
     "tr": "Cumartesi",
     "zh_cn": "星期六",
     "zh_tw": "星期六"
+   }
+  },
+  {
+   "key": "tease_0",
+   "t": {
+    "en": "she's waiting",
+    "tr": "seni bekliyor",
+    "de": "sie wartet",
+    "es": "te está esperando",
+    "es_la": "te está esperando",
+    "fr": "elle t'attend",
+    "id": "dia menunggumu",
+    "it": "ti sta aspettando",
+    "ja": "待ってるよ",
+    "ko": "기다리고 있어",
+    "pl": "ona czeka",
+    "pt_br": "ela está esperando",
+    "ru": "она ждёт",
+    "th": "เธอกำลังรออยู่",
+    "zh_cn": "她在等你",
+    "zh_tw": "她在等你"
+   }
+  },
+  {
+   "key": "tease_1",
+   "t": {
+    "en": "knock knock",
+    "tr": "tık tık",
+    "de": "klopf klopf",
+    "es": "toc, toc",
+    "es_la": "toc, toc",
+    "fr": "toc toc",
+    "id": "tok tok",
+    "it": "toc toc",
+    "ja": "コンコン",
+    "ko": "똑똑",
+    "pl": "puk puk",
+    "pt_br": "toc, toc",
+    "ru": "тук-тук",
+    "th": "ก๊อก ก๊อก",
+    "zh_cn": "咚咚",
+    "zh_tw": "叩叩"
+   }
+  },
+  {
+   "key": "tease_2",
+   "t": {
+    "en": "come say hi",
+    "tr": "gel bir merhaba de",
+    "de": "komm, sag hallo",
+    "es": "ven a saludar",
+    "es_la": "ven a saludar",
+    "fr": "viens dire bonjour",
+    "id": "mampir sebentar",
+    "it": "vieni a salutare",
+    "ja": "顔を見せて",
+    "ko": "인사하러 와",
+    "pl": "wpadnij się przywitać",
+    "pt_br": "vem dar um oi",
+    "ru": "зайди поздороваться",
+    "th": "แวะมาทักหน่อย",
+    "zh_cn": "来打个招呼吧",
+    "zh_tw": "來打個招呼吧"
+   }
+  },
+  {
+   "key": "tease_3",
+   "t": {
+    "en": "the light is on",
+    "tr": "ışık açık",
+    "de": "das Licht ist an",
+    "es": "la luz está encendida",
+    "es_la": "la luz está prendida",
+    "fr": "la lumière est allumée",
+    "id": "lampunya menyala",
+    "it": "la luce è accesa",
+    "ja": "電気はついてるよ",
+    "ko": "불 켜져 있어",
+    "pl": "światło jest zapalone",
+    "pt_br": "a luz está acesa",
+    "ru": "свет горит",
+    "th": "ไฟยังเปิดอยู่",
+    "zh_cn": "灯还亮着",
+    "zh_tw": "燈還亮著"
+   }
+  },
+  {
+   "key": "tease_4",
+   "t": {
+    "en": "I'm still here",
+    "tr": "hâlâ buradayım",
+    "de": "ich bin noch hier",
+    "es": "sigo aquí",
+    "es_la": "sigo aquí",
+    "fr": "je suis toujours là",
+    "id": "aku masih di sini",
+    "it": "sono ancora qui",
+    "ja": "まだここにいるよ",
+    "ko": "나 아직 여기 있어",
+    "pl": "wciąż tu jestem",
+    "pt_br": "ainda estou aqui",
+    "ru": "я всё ещё здесь",
+    "th": "ฉันยังอยู่ตรงนี้",
+    "zh_cn": "我还在这里",
+    "zh_tw": "我還在這裡"
+   }
+  },
+  {
+   "key": "tease_5",
+   "t": {
+    "en": "{name}?",
+    "tr": "{name}?",
+    "de": "{name}?",
+    "es": "¿{name}?",
+    "es_la": "¿{name}?",
+    "fr": "{name} ?",
+    "id": "{name}?",
+    "it": "{name}?",
+    "ja": "{name}？",
+    "ko": "{name}?",
+    "pl": "{name}?",
+    "pt_br": "{name}?",
+    "ru": "{name}?",
+    "th": "{name}?",
+    "zh_cn": "{name}？",
+    "zh_tw": "{name}？"
+   }
+  },
+  {
+   "key": "tease_done",
+   "t": {
+    "en": "she has something to tell you",
+    "tr": "sana söyleyeceği bir şey var",
+    "de": "sie will dir etwas sagen",
+    "es": "tiene algo que contarte",
+    "es_la": "tiene algo que contarte",
+    "fr": "elle a quelque chose à te dire",
+    "id": "dia ingin mengatakan sesuatu",
+    "it": "ha qualcosa da dirti",
+    "ja": "伝えたいことがあるみたい",
+    "ko": "너한테 할 말이 있대",
+    "pl": "chce ci coś powiedzieć",
+    "pt_br": "ela tem algo pra te dizer",
+    "ru": "ей есть что тебе сказать",
+    "th": "เธอมีอะไรจะบอก",
+    "zh_cn": "她有话想对你说",
+    "zh_tw": "她有話想對你說"
    }
   }
  ],
