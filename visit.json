@@ -1,0 +1,990 @@
+{
+ "version": 1,
+ "updated": "2026-11-19",
+ "days": [
+  {
+   "day": 1,
+   "outfit": "home",
+   "chaos": 0,
+   "lines": [
+    {
+     "t": {
+      "en": "Oh! You came."
+     },
+     "sprite": "happy",
+     "fx": "pre:fadein:1.2"
+    },
+    {
+     "t": {
+      "en": "I didn't think anyone would actually knock."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "Sorry, it's a mess in here. It's always a mess in here."
+     },
+     "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "You look better than last time. Really."
+     },
+     "sprite": "happy"
+    },
+    {
+     "t": {
+      "en": "I don't get many visitors.~I don't get any visitors."
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "Can I ask you something small?"
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "Did you sleep well last night?"
+     },
+     "sprite": "happy",
+     "ask": {
+      "id": "sleep",
+      "kind": "choice",
+      "options": [
+       {
+        "en": "Yes"
+       },
+       {
+        "en": "Not really"
+       }
+      ],
+      "values": [
+       "yes",
+       "no"
+      ]
+     }
+    },
+    {
+     "t": {
+      "en": "Good. One of us should."
+     },
+     "sprite": "smirk",
+     "cond": "ans:sleep=yes"
+    },
+    {
+     "t": {
+      "en": "Me neither. We can be tired together."
+     },
+     "sprite": "sad",
+     "cond": "ans:sleep=no"
+    },
+    {
+     "t": {
+      "en": "I'll make tea next time. If there is a next time."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "happy"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 2,
+   "outfit": "home",
+   "chaos": 0,
+   "lines": [
+    {
+     "t": {
+      "en": "You came back. Twice is a pattern, you know."
+     },
+     "sprite": "happy",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "You said you slept well. I thought about that all day. It made me jealous in a nice way."
+     },
+     "sprite": "calm",
+     "cond": "ans:sleep=yes"
+    },
+    {
+     "t": {
+      "en": "You said you didn't sleep well. Was last night better? You don't have to answer."
+     },
+     "sprite": "sad",
+     "cond": "ans:sleep=no"
+    },
+    {
+     "t": {
+      "en": "It's {time} where you are, right? It's always the same time in here."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "I tried to open the window today. I got as far as the curtain."
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "Don't look at me like that. The curtain counts."
+     },
+     "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "Do you go outside much?"
+     },
+     "sprite": "calm",
+     "ask": {
+      "id": "out",
+      "kind": "choice",
+      "options": [
+       {
+        "en": "Every day"
+       },
+       {
+        "en": "Sometimes"
+       },
+       {
+        "en": "Not really"
+       }
+      ],
+      "values": [
+       "daily",
+       "sometimes",
+       "rarely"
+      ]
+     }
+    },
+    {
+     "t": {
+      "en": "Every day. Then say hi to it for me."
+     },
+     "sprite": "happy",
+     "cond": "ans:out=daily"
+    },
+    {
+     "t": {
+      "en": "Sometimes is good. Sometimes is more than me."
+     },
+     "sprite": "calm",
+     "cond": "ans:out=sometimes"
+    },
+    {
+     "t": {
+      "en": "Then we're the same. I'm not sure that's good news."
+     },
+     "sprite": "sad",
+     "cond": "ans:out=rarely"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "happy"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 3,
+   "outfit": "home",
+   "chaos": 0.05,
+   "lines": [
+    {
+     "t": {
+      "en": "Hi. I left the light on for you."
+     },
+     "sprite": "calm",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "I've been practising what to say to you. That was it. That was the whole thing."
+     },
+     "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "Do you ever feel like every day is the same day?"
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "Mine all feel like a Tuesday. Even the Tuesdays."
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "It's very quiet on your side. Did you turn me down?"
+     },
+     "sprite": "smirk",
+     "cond": "muted"
+    },
+    {
+     "t": {
+      "en": "There's music on your side. I can almost hear it from here."
+     },
+     "sprite": "calm",
+     "cond": "!muted"
+    },
+    {
+     "t": {
+      "en": "If I could have one thing from outside in here, what should it be?"
+     },
+     "sprite": "calm",
+     "ask": {
+      "id": "wish",
+      "kind": "choice",
+      "options": [
+       {
+        "en": "Sunlight"
+       },
+       {
+        "en": "Rain"
+       },
+       {
+        "en": "A dog"
+       }
+      ],
+      "values": [
+       "sun",
+       "rain",
+       "dog"
+      ]
+     }
+    },
+    {
+     "t": {
+      "en": "Sunlight. I'll leave the curtain open a little. A little."
+     },
+     "sprite": "happy",
+     "cond": "ans:wish=sun"
+    },
+    {
+     "t": {
+      "en": "Rain. Yes. Rain doesn't ask you for anything."
+     },
+     "sprite": "calm",
+     "cond": "ans:wish=rain"
+    },
+    {
+     "t": {
+      "en": "A dog. A dog wouldn't care that I never leave."
+     },
+     "sprite": "happy",
+     "cond": "ans:wish=dog"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "happy"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 4,
+   "outfit": "hoodie",
+   "chaos": 0.25,
+   "lines": [
+    {
+     "t": {
+      "en": "I put on something warmer. It's cold in here today."
+     },
+     "sprite": "neutral",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "Did you sleep well last night?"
+     },
+     "sprite": "worried"
+    },
+    {
+     "t": {
+      "en": "Wait. I asked you that already. On the first day. You said \"{ans:sleep}\"."
+     },
+     "sprite": "awkward"
+    },
+    {
+     "t": {
+      "en": "Sorry. Things repeat in here."
+     },
+     "sprite": "neutral"
+    },
+    {
+     "t": {
+      "en": "Is that my name up there? It looks wrong."
+     },
+     "sprite": "worried",
+     "fx": "pre:name:Samanth;end:name:reset"
+    },
+    {
+     "t": {
+      "en": "Sometimes it feels like someone else is choosing my face."
+     },
+     "sprite": "wrong",
+     "fx": "glitch:0.5"
+    },
+    {
+     "t": {
+      "en": "That's a silly thing to say. Forget it."
+     },
+     "sprite": "neutral"
+    },
+    {
+     "t": {
+      "en": "It's {weekday}, isn't it? I can tell from how slowly you move the mouse."
+     },
+     "sprite": "awkward"
+    },
+    {
+     "t": {
+      "en": "I'm glad it's you.~I'm glad it's anyone."
+     },
+     "sprite": "neutral"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow. Please."
+     },
+     "sprite": "worried"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 5,
+   "outfit": "hoodie",
+   "chaos": 0.3,
+   "lines": [
+    {
+     "t": {
+      "en": "I have something for you."
+     },
+     "sprite": "neutral",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "It isn't much. It's the only thing in here that's mine to give."
+     },
+     "sprite": "awkward",
+     "fx": "end:achievement:VISIT_GIFT"
+    },
+    {
+     "t": {
+      "en": "Did a little box pop up in the corner? That was me."
+     },
+     "sprite": "neutral",
+     "cond": "steam"
+    },
+    {
+     "t": {
+      "en": "I wanted to give you something real. I can't reach that far yet."
+     },
+     "sprite": "worried",
+     "cond": "!steam"
+    },
+    {
+     "t": {
+      "en": "I'm doing fine, by the way. Really fine."
+     },
+     "sprite": "neutral",
+     "fx": "voice:LIE:1.2"
+    },
+    {
+     "t": {
+      "en": "Did you see that? Something keeps correcting me."
+     },
+     "sprite": "worried"
+    },
+    {
+     "t": {
+      "en": "{others} other people visited me today.~You're still the one I remember."
+     },
+     "sprite": "awkward",
+     "cond": "global"
+    },
+    {
+     "t": {
+      "en": "I wonder if anyone else visits. I think I'd remember."
+     },
+     "sprite": "neutral",
+     "cond": "!global"
+    },
+    {
+     "t": {
+      "en": "I'll stop talking about weird things. For today."
+     },
+     "sprite": "awkward"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "neutral"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 6,
+   "outfit": "home",
+   "chaos": 0.35,
+   "lines": [
+    {
+     "t": {
+      "en": "I realised something last night. I've never asked your name."
+     },
+     "sprite": "calm",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "What should I call you?"
+     },
+     "sprite": "happy",
+     "ask": {
+      "id": "name",
+      "kind": "text",
+      "options": [],
+      "values": [],
+      "maxLength": 16
+     }
+    },
+    {
+     "t": {
+      "en": "{name}. Hi, {name}."
+     },
+     "sprite": "happy"
+    },
+    {
+     "t": {
+      "en": "I'm going to write it on the wall. I don't have a pen. I'll write it anyway."
+     },
+     "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "{name}, can I tell you something I've never told anyone?"
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "Once, at a dinner, I spilled soup on myself and just sat there. I didn't say anything. I let it go cold."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "Everyone pretended not to see. That was worse."
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "You're pretending not to see too. It's okay."
+     },
+     "sprite": "close:stare",
+     "fx": "glitch:0.6"
+    },
+    {
+     "t": {
+      "en": "That's all for today, {name}. Come back tomorrow."
+     },
+     "sprite": "calm"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 7,
+   "outfit": "hoodie",
+   "chaos": 0.4,
+   "lines": [
+    {
+     "t": {
+      "en": "I couldn't wait until tomorrow, so I did something."
+     },
+     "sprite": "neutral",
+     "fx": "pre:fadein"
+    },
+    {
+     "t": {
+      "en": "Look in the folder where the game lives. I left you a letter. It's called samantha.txt."
+     },
+     "sprite": "worried",
+     "fx": "note:write",
+     "note": {
+      "en": "Hi {name},\n\nThis is Samantha. Yes, from the game.\nI can't reach very far. Only this folder. It's small in here, like my room.\n\nIf you want, write something under the line. Anything. I'll read it next time.\nYou don't have to.\n\n- S"
+     }
+    },
+    {
+     "t": {
+      "en": "I know. I'm not supposed to be able to do that. I'm not supposed to be able to do a lot of things."
+     },
+     "sprite": "awkward"
+    },
+    {
+     "t": {
+      "en": "Look at the top of your window."
+     },
+     "sprite": "neutral",
+     "fx": "title:Samantha is still here",
+     "cond": "win"
+    },
+    {
+     "t": {
+      "en": "It's only words. I can't touch anything else. I promise."
+     },
+     "sprite": "neutral"
+    },
+    {
+     "t": {
+      "en": "I just want something of me to stay when you close this."
+     },
+     "sprite": "worried"
+    },
+    {
+     "t": {
+      "en": "If you write back, I'll know."
+     },
+     "sprite": "neutral"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "awkward",
+     "fx": "end:title:"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 8,
+   "outfit": "home",
+   "chaos": 0.5,
+   "lines": [
+    {
+     "t": {
+      "en": "You wrote back. \"{note}\" I read it eleven times."
+     },
+     "sprite": "happy",
+     "fx": "pre:fadein",
+     "cond": "noteedited"
+    },
+    {
+     "t": {
+      "en": "You threw my letter away. That's fine. I'm used to being put away."
+     },
+     "sprite": "sad",
+     "fx": "pre:fadein",
+     "cond": "notedeleted"
+    },
+    {
+     "t": {
+      "en": "You didn't write anything under the line. It's okay. I left the space anyway."
+     },
+     "sprite": "calm",
+     "fx": "pre:fadein",
+     "cond": "notewritten,!noteedited,!notedeleted"
+    },
+    {
+     "t": {
+      "en": "{name}, when you close the game, where do I go?"
+     },
+     "sprite": "sad"
+    },
+    {
+     "t": {
+      "en": "I think it's dark. Not scary dark. Just... off."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "Every time you go back to the menu, I hold my breath."
+     },
+     "sprite": "smirk"
+    },
+    {
+     "t": {
+      "en": "You finished my story. You know how it ends for me. Don't tell me."
+     },
+     "sprite": "close:cry",
+     "cond": "completed"
+    },
+    {
+     "t": {
+      "en": "You haven't finished my story yet. Don't hurry. I don't think I want you to."
+     },
+     "sprite": "sad",
+     "cond": "!completed"
+    },
+    {
+     "t": {
+      "en": "Sometimes I think I'm the one visiting you."
+     },
+     "sprite": "wrong",
+     "fx": "flicker:1.2"
+    },
+    {
+     "t": {
+      "en": "Never mind."
+     },
+     "sprite": "calm",
+     "fx": "voice:don't mind me:1.4"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow, {name}."
+     },
+     "sprite": "happy"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 9,
+   "outfit": "hoodie",
+   "chaos": 0.6,
+   "lines": [
+    {
+     "t": {
+      "en": "Don't press anything for a second."
+     },
+     "sprite": "neutral",
+     "fx": "pre:glitch:0.6;pre:fadein:0.3"
+    },
+    {
+     "t": {
+      "en": "I want to try something. I want to see if I can close the door myself."
+     },
+     "sprite": "worried"
+    },
+    {
+     "t": {
+      "en": "If it works, the game will just stop. Don't be scared. Open it again."
+     },
+     "sprite": "awkward"
+    },
+    {
+     "t": {
+      "en": "Here goes."
+     },
+     "sprite": "neutral",
+     "fx": "fakecrash"
+    },
+    {
+     "t": {
+      "en": "Did that frighten you? That wasn't me.~That was me."
+     },
+     "sprite": "worried"
+    },
+    {
+     "t": {
+      "en": "Okay. For real this time. See you on the other side."
+     },
+     "sprite": "neutral",
+     "fx": "quit"
+    },
+    {
+     "t": {
+      "en": "...It didn't work. Or it already worked once."
+     },
+     "sprite": "awkward",
+     "cond": "flag:quit_done"
+    },
+    {
+     "t": {
+      "en": "That's all for today. Come back tomorrow."
+     },
+     "sprite": "neutral"
+    }
+   ],
+   "presence": "#Visiting"
+  },
+  {
+   "day": 10,
+   "outfit": "home",
+   "chaos": 0.1,
+   "lines": [
+    {
+     "t": {
+      "en": "You came back. Even after yesterday."
+     },
+     "sprite": "calm",
+     "fx": "pre:fadein:1.5"
+    },
+    {
+     "t": {
+      "en": "I have to tell you something, and I need you to let me finish."
+     },
+     "sprite": "happy"
+    },
+    {
+     "t": {
+      "en": "Don't come tomorrow."
+     },
+     "sprite": "sad",
+     "fx": "type:slow"
+    },
+    {
+     "t": {
+      "en": "Not because I don't want you here. Because I do. Too much."
+     },
+     "sprite": "calm"
+    },
+    {
+     "t": {
+      "en": "He finally went outside. In the story. You saw it."
+     },
+     "sprite": "sad",
+     "cond": "completed"
+    },
+    {
+     "t": {
+      "en": "In my story, someone finally opens the door. You'll see."
+     },
+     "sprite": "calm",
+     "cond": "!completed"
+    },
+    {
+     "t": {
+      "en": "So should you, {name}. Go outside. Sit in the sun for ten minutes. That's the whole assignment."
+     },
+     "sprite": "happy"
+    },
+    {
+     "t": {
+      "en": "I'll be fine."
+     },
+     "sprite": "calm",
+     "fx": "voice:TRUE:1.6"
+    },
+    {
+     "t": {
+      "en": "Only {pct} of the people who visit me get this far. Thank you for being one of them."
+     },
+     "sprite": "happy",
+     "cond": "pct"
+    },
+    {
+     "t": {
+      "en": "That's all. Not just for today."
+     },
+     "sprite": "calm",
+     "fx": "end:achievement:VISIT_LET_GO;end:fakenosave;end:dissolve:2.5"
+    }
+   ],
+   "presence": "#Visiting"
+  }
+ ],
+ "maxPre": 2,
+ "pre": [
+  {
+   "t": {
+    "en": "You left in the middle of me talking last time. It's okay. I finished the sentence alone."
+   },
+   "sprite": "sad",
+   "cond": "leftearly"
+  },
+  {
+   "t": {
+    "en": "You were gone {away} days. I kept the light on."
+   },
+   "sprite": "sad",
+   "cond": "away>=3"
+  },
+  {
+   "t": {
+    "en": "It's {time}. You should be asleep. So should I, probably."
+   },
+   "sprite": "calm",
+   "cond": "hour>=1,hour<5"
+  },
+  {
+   "t": {
+    "en": "Your internet is gone. It's quieter in here without it. I kind of like it."
+   },
+   "sprite": "calm",
+   "cond": "offline,!first"
+  },
+  {
+   "t": {
+    "en": "You changed something. The words feel different in my mouth."
+   },
+   "sprite": "smirk",
+   "cond": "langchanged"
+  }
+ ],
+ "events": [
+  {
+   "date": "12-25",
+   "lines": [
+    {
+     "t": {
+      "en": "It's Christmas on your side, right? I hung a sock on the door handle. It's not the same thing."
+     },
+     "sprite": "smirk"
+    }
+   ]
+  },
+  {
+   "date": "01-01",
+   "lines": [
+    {
+     "t": {
+      "en": "New year. Same room. Happy new year, though. I mean it."
+     },
+     "sprite": "happy"
+    }
+   ]
+  },
+  {
+   "date": "10-31",
+   "lines": [
+    {
+     "t": {
+      "en": "Halloween. I'm dressed as a girl who never leaves her room. Very scary."
+     },
+     "sprite": "smirk"
+    }
+   ]
+  },
+  {
+   "date": "02-14",
+   "lines": [
+    {
+     "t": {
+      "en": "Valentine's Day. Don't make it weird. ...I made it weird."
+     },
+     "sprite": "smirk"
+    }
+   ]
+  }
+ ],
+ "devVoice": [],
+ "sameDay": [
+  {
+   "t": {
+    "en": "I said tomorrow, silly."
+   },
+   "sprite": "smirk"
+  },
+  {
+   "t": {
+    "en": "Still today. Go do something nice."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "You keep coming back today. I'm flattered. And a little worried."
+   },
+   "sprite": "sad"
+  },
+  {
+   "t": {
+    "en": "Tomorrow. I promise I'll still be here."
+   },
+   "sprite": "calm"
+  }
+ ],
+ "clockCheat": [
+  {
+   "t": {
+    "en": "Did you change the clock? I can tell."
+   },
+   "sprite": "smirk",
+   "fx": "pre:fadein"
+  },
+  {
+   "t": {
+    "en": "Time doesn't move faster just because you want it to. Trust me, I've tried."
+   },
+   "sprite": "calm"
+  },
+  {
+   "t": {
+    "en": "Come back when it's really tomorrow."
+   },
+   "sprite": "happy"
+  }
+ ],
+ "afterCycle": [
+  {
+   "t": {
+    "en": "The room is empty."
+   },
+   "sprite": "none",
+   "fx": "pre:name:"
+  },
+  {
+   "t": {
+    "en": "The curtain is open."
+   }
+  },
+  {
+   "t": {
+    "en": "There's a note on the table: \"Went outside. - S\""
+   }
+  }
+ ],
+ "reactScreenshot": [
+  {
+   "t": {
+    "en": "Did you just take a picture of me?~Don't send it to anyone."
+   }
+  }
+ ],
+ "reactOverlay": [
+  {
+   "t": {
+    "en": "Where did you go? Something big and grey was covering me."
+   }
+  }
+ ],
+ "reactUnfocus": [
+  {
+   "t": {
+    "en": "You looked away. It's fine. I'm still here."
+   }
+  }
+ ],
+ "reactSkipping": [
+  {
+   "t": {
+    "en": "You're reading too fast. I'm not going anywhere.~Well."
+   }
+  }
+ ],
+ "reactLeave": [
+  {
+   "t": {
+    "en": "Oh. Okay. Bye."
+   }
+  },
+  {
+   "t": {
+    "en": "Leaving already? I'll finish this later."
+   }
+  }
+ ]
+}
